@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Escape Room</title>
+    <title>Квест - Escape Room</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -93,7 +93,80 @@
   <path d="M12.3868 33.9267L12.1234 33.7743L11.9688 22.1189L4.23989 17.6243M12.3868 33.9267L22.5849 28.1296M12.3868 33.9267L22.5849 39.225M23.0984 27.8377V39.4115L22.5849 39.225M23.0984 27.8377L4.23989 17.0301V13.9676L4.70363 13.6629L25.8808 1.70271L46.7286 14.12V21.5078H47.4006L47.4253 13.7106L25.8813 1L4.37806 13.1444L3.62158 13.6415V38.7831L26.3453 50.9999L28.6632 49.7471V49.7591L29.1178 49.5014L29.3588 49.3711V49.3648L47.3458 38.8506L47.3719 31.3571H46.7286V38.4975L29.2815 48.7055V42.535L42.0334 35.4537L28.8634 27.8377M23.0984 27.8377L22.5849 28.1296M28.8634 27.8377L28.7405 27.9085V49.0103L26.3445 50.3053L4.23989 38.4213V17.6243M28.8634 27.8377L29.1302 28.3991L38.474 22.9307L38.1584 22.4067L28.8634 27.8377ZM4.23989 17.6243V17.3957M22.5849 28.1296V39.225M38.247 15.2627L28.354 9.62539L15.6014 17.0301L25.8035 22.8806L38.7832 15.5626L38.247 15.2627ZM21.8645 27.8356L12.7318 33.027L12.5925 22.5218L21.8645 27.8356ZM40.8269 35.4708L29.3588 41.7721V28.8234L40.8269 35.4708ZM28.3569 10.331L37.5379 15.5626L25.8061 22.1771L16.8252 17.0268L28.3569 10.331ZM12.2887 33.8917L28.9058 42.5L29.1935 41.9605L12.5764 33.3522L12.2887 33.8917ZM38.7832 16.1533V34.0652H39.4015V16.1533H38.7832Z" stroke="white" stroke-width="1.5"/>
 </g></symbol></svg>
     </div>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container container--size-l">
+          <a class="logo header__logo" href="index.html" aria-label="Перейти на Главную">
+            <svg width="134" height="52" aria-hidden="true">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </a>
+          <nav class="main-nav header__main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="link not-disabled active" href="index.html">Квесты</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__side-nav">
+            <a class="btn header__side-item header__login-btn" href="login.html">Вход</a>
+            <a class="link header__side-item header__phone-link" href="tel:88003335599">8 (000) 111-11-11</a>
+          </div>
+        </div>
+      </header>
+      <main class="decorated-page quest-page">
+        <div class="decorated-page__decor" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="img/content/maniac/maniac-size-m.webp, img/content/maniac/maniac-size-m@2x.webp 2x"><img src="img/content/maniac/maniac-size-m.jpg" srcset="img/content/maniac/maniac-size-m@2x.jpg 2x" width="1366" height="768" alt="">
+          </picture>
+        </div>
+        <div class="container container--size-l">
+          <div class="quest-page__content">
+            <h1 class="title title--size-l title--uppercase quest-page__title">Маньяк</h1>
+            <p class="subtitle quest-page__subtitle"><span class="visually-hidden">Жанр:</span>Ужасы
+            </p>
+            <ul class="tags tags--size-l quest-page__tags">
+              <li class="tags__item">
+                <svg width="11" height="14" aria-hidden="true">
+                  <use xlink:href="#icon-person"></use>
+                </svg>3&ndash;6&nbsp;чел
+              </li>
+              <li class="tags__item">
+                <svg width="14" height="14" aria-hidden="true">
+                  <use xlink:href="#icon-level"></use>
+                </svg>Средний
+              </li>
+            </ul>
+            <p class="quest-page__description">В&nbsp;комнате с&nbsp;приглушённым светом несколько человек, незнакомых друг с&nbsp;другом, приходят в&nbsp;себя. Никто не&nbsp;помнит, что произошло прошлым вечером. Руки и&nbsp;ноги связаны, но&nbsp;одному из&nbsp;вас получилось освободиться. На&nbsp;стене висит пугающий таймер и&nbsp;запущен отсчёт 60&nbsp;минут. Сможете&nbsp;ли вы&nbsp;разобраться в&nbsp;стрессовой ситуации, помочь другим, разобраться что произошло и&nbsp;выбраться из&nbsp;комнаты?</p>
+            <a class="btn btn--accent btn--cta quest-page__btn" href="booking.html">Забронировать</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container container--size-l">
+          <div class="socials">
+            <ul class="socials__list">
+              <li class="socials__item"><a class="socials__link" href="#" aria-label="Skype" target="_blank" rel="nofollow noopener noreferrer">
+                  <svg class="socials__icon socials__icon--default" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-skype-default"></use>
+                  </svg>
+                  <svg class="socials__icon socials__icon--interactive" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-skype-interactive"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#" aria-label="ВКонтакте" target="_blank" rel="nofollow noopener noreferrer">
+                  <svg class="socials__icon socials__icon--default" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-vk-default"></use>
+                  </svg>
+                  <svg class="socials__icon socials__icon--interactive" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-vk-interactive"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
