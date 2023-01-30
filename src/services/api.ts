@@ -1,8 +1,8 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import { getToken } from './token';
 
-const BACKEND_URL = 'https://grading.design.pages.academy';
-const REQUEST_TIMEOUT = 5000;
+const BACKEND_URL = ' https://grading.design.pages.academy';
+const REQUEST_TIMEOUT = 3000;
 
 export const createApi = (): AxiosInstance => {
   const api = axios.create({

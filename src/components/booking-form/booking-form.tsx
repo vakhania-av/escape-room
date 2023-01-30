@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { useAppDispatch } from '../../hooks';
 import { BookingQuestInfo } from '../../types/booking';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -22,15 +23,13 @@ type FormValues = {
 
 function BookingForm({ bookingInfo, questId }: BookingFormProps): JSX.Element {
   const dispatch = useAppDispatch();
-  const {
-    register,
-    handleSubmit,
-    formState: { isValid },
-  } = useForm<FormValues>({ defaultValues: { id: bookingInfo.id, questId } });
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const { register, handleSubmit, formState: { isValid } } = useForm<FormValues>({ defaultValues: { id: bookingInfo.id, questId } });
 
   const { today, tomorrow } = bookingInfo.slots;
 
   const onSubmit: SubmitHandler<FormValues> = (values): void => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     dispatch(postBookingQuestInfo({ ...values }));
   };
 
@@ -40,6 +39,7 @@ function BookingForm({ bookingInfo, questId }: BookingFormProps): JSX.Element {
       action='https://echo.htmlacademy.ru/'
       method='post'
       // eslint-disable-next-line @typescript-eslint/no-misused-promises
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       onSubmit={handleSubmit(onSubmit)}
     >
       <fieldset className='booking-form__section'>
@@ -73,6 +73,7 @@ function BookingForm({ bookingInfo, questId }: BookingFormProps): JSX.Element {
         </fieldset>
         <fieldset
           className='booking-form__date-section'
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-call
           {...register('date', {
             value: 'tomorrow',
           })}

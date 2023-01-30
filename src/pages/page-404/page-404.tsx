@@ -1,23 +1,25 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import Logo from '../../components/logo/logo';
+import { AppRoute } from '../../const';
 import styles from './page-404.module.css';
 
 const PageNotFound = (): JSX.Element => (
-  <div className={styles.wrapper}>
-    <div className={styles.logo}>
-      <span className="logo header__logo">
-        <svg width="134" height="52" aria-hidden="true">
-          <use xlinkHref="#logo"></use>
-        </svg>
-      </span>
-    </div>
-    <div className={styles.content}>
-      <div className={styles.contentItem}>
-        <h1>404 - Page Not Found</h1>
+  <>
+    <Helmet>
+      <title>EscapeRoom | Not Found</title>
+    </Helmet>
+    <header className='header'>
+      <div className='container container--size-l'>
+        <Logo />
       </div>
-      <div className={styles.contentItem}>
-        <button>На главную</button>
-      </div>
-    </div>
-  </div>
+    </header>
+    <section className={styles.container}>
+      <h1>404</h1>
+      <h3>Page Not Found</h3>
+      <Link to={AppRoute.Root}>Вернуться на главную страницу</Link>
+    </section>
+  </>
 );
 
 export default PageNotFound;
