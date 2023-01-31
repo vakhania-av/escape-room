@@ -10,9 +10,7 @@ function QuestCard({ quest }: QuestCardProps): JSX.Element {
   const { id, title, previewImg, previewImgWebp, level, peopleMinMax } = quest;
   const [minPeople, maxPeople] = peopleMinMax;
 
-  const questLink = `${AppRoute.Root}${generatePath(AppRoute.Quest, {
-    id: String(id),
-  })}`;
+  const questLink = `${AppRoute.Root}${generatePath(AppRoute.Quest, { id: String(id) })}`;
 
   return (
     <div className='quest-card'>
@@ -33,9 +31,7 @@ function QuestCard({ quest }: QuestCardProps): JSX.Element {
       </div>
       <div className='quest-card__content'>
         <div className='quest-card__info-wrapper'>
-          <Link className='quest-card__link' to={questLink}>
-            {title}
-          </Link>
+          <Link className='quest-card__link' to={questLink}>{title}</Link>
         </div>
         <ul className='tags quest-card__tags'>
           <li className='tags__item'>

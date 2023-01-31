@@ -4,8 +4,8 @@ import { getLevel } from '../../store/ui/selectors';
 import { changeLevel } from '../../store/ui/ui';
 
 function FilterLevelForm(): JSX.Element {
-  const levelFilterCurrent = useAppSelector(getLevel);
   const dispatch = useAppDispatch();
+  const levelFilterCurrent = useAppSelector(getLevel);
 
   const handleInputChange = (level: Level) => dispatch(changeLevel({ level }));
 
@@ -13,7 +13,7 @@ function FilterLevelForm(): JSX.Element {
     <ul className='filter__list'>
       {Object.values(SortByLevelType).map((value) => {
         const { id, title } = value;
-        const isChecked = id === levelFilterCurrent;
+        const isChecked = (id === levelFilterCurrent);
 
         return (
           <li className='filter__item' key={id}>

@@ -6,7 +6,7 @@ function MyQuestsPage(): JSX.Element {
   return (
     <>
       <Helmet>
-        <title>EscapeRoom | MyQuests</title>
+        <title>EscapeRoom|MyQuests</title>
       </Helmet>
       <div className='wrapper'>
         <Layout page={PageLink.MyQuests}>

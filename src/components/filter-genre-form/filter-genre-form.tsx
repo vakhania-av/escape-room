@@ -7,14 +7,13 @@ function FilterGenreForm(): JSX.Element {
   const dispatch = useAppDispatch();
   const genreFilterCurrent = useAppSelector(getGenre);
 
-  const handleInputChange = (genre: QuestType) => {
-    dispatch(changeGenre({ genre }));
-  };
+  const handleInputChange = (genre: QuestType) => dispatch(changeGenre({ genre }));
 
   return (
     <ul className='filter__list'>
       {Object.values(SortByGenreType).map((value) => {
         const { title, iconWidth, svgRef, id } = value;
+        const isChecked = (id === genreFilterCurrent);
 
         return (
           <li key={id} className='filter__item'>
@@ -22,7 +21,7 @@ function FilterGenreForm(): JSX.Element {
               type='radio'
               id={id}
               name='type'
-              checked={id === genreFilterCurrent}
+              checked={isChecked}
               onChange={() => handleInputChange(id)}
             />
             <label className='filter__label' htmlFor={id}>

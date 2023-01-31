@@ -11,7 +11,7 @@ export interface HistoryRouterProps {
 function HistoryRouter({
   basename,
   children,
-  history,
+  history
 }: HistoryRouterProps): JSX.Element {
   const [state, setState] = useState({
     action: history.action,

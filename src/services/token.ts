@@ -1,4 +1,4 @@
-const AUTH_TOKEN_NAME = 'escape-room-my-token';
+const AUTH_TOKEN_NAME = 'escape-room-token';
 
 export type Token = string;
 
@@ -7,6 +7,6 @@ export const getToken = (): Token => {
   return token ?? '';
 };
 
-export const saveToken = (token: Token): void => localStorage.setItem(AUTH_TOKEN_NAME, token);
+export const saveToken = (token: Token) => localStorage.setItem(AUTH_TOKEN_NAME, token);
 
-export const dropToken = (): void => localStorage.removeItem(AUTH_TOKEN_NAME);
+export const dropToken = () => localStorage.removeItem(AUTH_TOKEN_NAME);

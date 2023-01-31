@@ -23,8 +23,8 @@ const App = (): JSX.Element => (
           <Route path={AppRoute.Reservations} element={<PrivateRoute><MyQuestsPage /></PrivateRoute>} />
           <Route path={AppRoute.Booking} element={<PrivateRoute><BookingPage /></PrivateRoute>} />
           <Route path={AppRoute.Quest} element={<QuestPage />} />
-          <Route path={AppRoute.NotFound} element={<PageNotFound />} />
         </Route>
+        <Route path={AppRoute.NotFound} element={<PageNotFound />} />
       </Routes>
     </HistoryRouter>
   </HelmetProvider>

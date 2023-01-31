@@ -8,5 +8,5 @@ const api = createApi();
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({ thunk: { extraArgument: api } }).concat(redirect),
+    getDefaultMiddleware({ thunk: { extraArgument: api } }).concat(redirect)
 });
